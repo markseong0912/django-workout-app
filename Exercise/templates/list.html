@@ -1,0 +1,10 @@
+<h1>Exercise List</h1>
+<ul>
+  {% for ex in exercises %}
+    <li>
+      <a href="{% url 'exercise_detail' ex.pk %}">
+        {{ ex.name }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
