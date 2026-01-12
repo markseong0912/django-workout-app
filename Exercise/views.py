@@ -29,4 +29,4 @@ def side_lateral_raises(request):
 
 def exercise_list(request):
     exercises = Exercise.objects.all()
-    return render(request, 'exercise_list.html', {'exercises': exercises})
+    return render(request, 'exercise-lists.html', {'exercises': exercises})

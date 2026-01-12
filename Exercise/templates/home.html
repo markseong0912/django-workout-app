@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% block title %}Exercise App{% endblock %}</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Home</title>
 </head>
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+    h1, h2, p {
+            text-align: center;
+        }
 
-<body class="bg-light">
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border: 2px solid #ccc;
+        }
+</style>
+<body>
+    <h1>Welcome to the Exercise App</h1>
+    <h2><a href="{% url 'intro' %}">My Introduction</a></h2>
+    <h2><a href="{% url 'exercise_list' %}">Lists of Exercises</a></h2>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'home' %}">Exercise App</a>
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="{% url 'intro' %}">Introduction</a>
-                <a class="nav-link" href="{% url 'exercise_list' %}">Exercise List</a>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container mt-4">
-        {% block content %}
-        {% endblock %}
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <h3>
+        <img src="" alt="">
+    </h3>
 </body>
 </html>
