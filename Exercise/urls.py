@@ -27,6 +27,7 @@ urlpatterns = [
     path('leg-extensions/', views.leg_extension, name = 'leg-extensions.html'),
     path('side-lateral-raises/', views.side_lateral_raises, name='side-lateral-raises.html'),
     path('exercise_list/', views.exercise_list, name='exercise_list'),
-    path('', views.home, name='home'),
+    path("", views.home, name="home"),
+    path("intro/", views.intro, name="intro"),
 
 ]
