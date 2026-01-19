@@ -21,13 +21,13 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('intro/', views.intro),
+    path("intro/", views.intro, name="intro"),
     path('biceps-curl/', views.biceps, name='biceps.html'),
     path('triceps-extension/', views.triceps, name='triceps.html'),
     path('leg-extensions/', views.leg_extension, name = 'leg-extensions.html'),
     path('side-lateral-raises/', views.side_lateral_raises, name='side-lateral-raises.html'),
-    path('exercise_list/', views.exercise_list, name='exercise_list'),
+    path('exercise-lists/', views.exercise_lists, name='exercise_lists'),
+    path("exercises/<str:name>/", views.exercise_details, name="exercise_details"),
     path("", views.home, name="home"),
-    path("intro/", views.intro, name="intro"),
 
 ]

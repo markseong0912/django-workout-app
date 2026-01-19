@@ -1,32 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Home</title>
-</head>
-<style>
-    body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-    h1, h2, p {
-            text-align: center;
-        }
+{% extends "base.html" %}
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 10px auto;
-            border: 2px solid #ccc;
-        }
-</style>
-<body>
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<div class="text-center mt-5">
+
     <h1>Welcome to the Exercise App</h1>
-    <h2><a href="{% url 'intro' %}">My Introduction</a></h2>
-    <h2><a href="{% url 'exercise_list' %}">Lists of Exercises</a></h2>
 
-    <h3>
-        <img src="" alt="">
-    </h3>
-</body>
-</html>
+    <p class="mt-3">
+        This website is a practice project to learn Django and basic web development using Python.
+    </p>
+
+    <div class="mt-4">
+        <a href="{% url 'intro' %}" class="btn btn-primary me-2">
+            My Introduction
+        </a>
+
+        <a href="{% url 'exercise_lists' %}" class="btn btn-outline-primary">
+            Exercise List
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}

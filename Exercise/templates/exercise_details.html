@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% url 'exercise_details' ex.name %}
+{% block title %}Exercise{% endblock %}
+
+{% block content %}
+  <h1>Exercise: {{ name }}</h1>
+  <p>This page is generated from the URL.</p>
+{% endblock %}
