@@ -9,7 +9,7 @@ def intro(request):
     return render(request, 'intro.html')
 
 def exercise_details(request, name):
-    exercise = get_object_or_404(Exercise, name=name)
+    exercise = get_object_or_404(Exercise, name__iexact=name)
     return render(request, "exercise_details.html", {"exercise": exercise})
 
 def biceps(request):

@@ -14,15 +14,19 @@ Home
         This website is a practice project to learn Django and basic web development using Python.
     </p>
 
-    <div class="mt-4">
-        <a href="{% url 'intro' %}" class="btn btn-primary me-2">
-            My Introduction
-        </a>
+   <div class="text-center">
+    <h2 class="fw-semibold mb-4">Basic Exercises</h2>
 
-        <a href="{% url 'exercise_lists' %}" class="btn btn-outline-primary">
-            Exercise List
-        </a>
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a class="btn btn-secondary" href="{% url 'exercise_details' 'Biceps Curl' %}">Biceps Curl</a>
+        <a class="btn btn-secondary" href="{% url 'exercise_details' 'Triceps Extension' %}">Triceps Extension</a>
+        <a class="btn btn-secondary" href="{% url 'exercise_details' 'Leg Extensions' %}">Leg Extensions</a>
+        <a class="btn btn-secondary" href="{% url 'exercise_details' 'Side Lateral Raises' %}">Side Lateral Raises</a>
+
     </div>
+
+</div>
+
 
 </div>
 
